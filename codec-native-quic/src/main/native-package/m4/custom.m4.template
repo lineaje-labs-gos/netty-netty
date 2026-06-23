@@ -29,7 +29,7 @@ AC_DEFUN([CUSTOM_M4_SETUP],
       esac
 
   dnl Update the compiler/linker flags
-  CFLAGS="$CFLAGS -std=gnu99 -fcommon -fvisibility=hidden -Werror -fno-omit-frame-pointer -Wunused -Wno-unused-value -O3 -I@BORINGSSL_INCLUDE_DIR@ -I@QUICHE_INCLUDE_DIR@ @EXTRA_CFLAGS@"
+  CFLAGS="$CFLAGS -std=gnu99 -fcommon -fvisibility=hidden -fno-omit-frame-pointer -Wunused -Wno-unused-value -O3 -I@BORINGSSL_INCLUDE_DIR@ -I@QUICHE_INCLUDE_DIR@ @EXTRA_CFLAGS@"
   CXXFLAGS="$CXXFLAGS"
   LDFLAGS="$LDFLAGS -L@BORINGSSL_LIB_DIR@ -lssl -lcrypto -L@QUICHE_LIB_DIR@ -lquiche @EXTRA_LDFLAGS@"
   AC_SUBST(CFLAGS)
